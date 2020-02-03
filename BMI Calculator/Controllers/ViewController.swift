@@ -56,6 +56,8 @@ class ViewController: UIViewController {
         {
             let resultVC = segue.destination as! ResultsViewController
             resultVC.bmiValue = calculatorBrain.getBMIValue()
+            resultVC.advice = calculatorBrain.getAdvice()
+            resultVC.color = calculatorBrain.getColor()
             self.present(resultVC,animated: true,completion: nil)
         }
     }
